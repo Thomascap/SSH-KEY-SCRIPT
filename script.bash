@@ -5,11 +5,19 @@ echo "Are you already using SSH Keys? (y/n)"
 read ALREADY_HAVE_CHOISE
 if [ "$ALREADY_HAVE_CHOISE" == "y" ]; then
     ALREADY_HAVE=true
+elif [ "$ALREADY_HAVE_CHOICE" == "yes" ]; then
+    ALREADY_HAVE=true
 elif [ "$ALREADY_HAVE_CHOICE" == "Y" ]; then
+    ALREADY_HAVE=true
+elif [ "$ALREADY_HAVE_CHOICE" == "Yes" ]; then
     ALREADY_HAVE=true
 elif [ "$ALREADY_HAVE_CHOICE" == "n" ]; then 
     ALREADY_HAVE=false
+elif [ "$ALREADY_HAVE_CHOICE" == "no" ]; then 
+    ALREADY_HAVE=false
 elif [ "$ALREADY_HAVE_CHOICE" == "N" ]; then 
+    ALREADY_HAVE=false
+elif [ "$ALREADY_HAVE_CHOICE" == "No" ]; then 
     ALREADY_HAVE=false
 else
     echo "Answer not found"
